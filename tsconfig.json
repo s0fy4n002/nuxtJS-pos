@@ -15,11 +15,5 @@
       "path": "./.nuxt/tsconfig.node.json"
     }
   ],
-  "extends": "./.nuxt/tsconfig.json",
-  "compilerOptions": {
-    "paths": {
-      "@/*": ["./*"],
-      "#/*": ["./*"]
-    }
-  }
+  
 }

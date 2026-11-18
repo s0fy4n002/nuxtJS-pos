@@ -1,14 +1,13 @@
-import { createOrder, listOrders } from '@server/core/application/use-cases/orders'
-import {
-  createProduct, getProduct, listProducts, updateProduct,
-} from '../core/application/use-cases/products'
-import { getReport } from '../core/application/use-cases/reports'
-import { uploadProductImage } from '../core/application/use-cases/upload-product-image'
+
 import { prisma } from './prisma/client'
 import { PrismaOrderRepository } from './prisma/order.repository'
 import { PrismaProductRepository } from './prisma/product.repository'
 import { PrismaUnitOfWork } from './prisma/unit-of-work'
 import { createStorage } from './storage/factory'
+import { createOrder, listOrders } from '../core/application/use-case/orders'
+import { createProduct, getProduct, listProducts, updateProduct } from '../core/application/use-case/products'
+import { uploadProductImage } from '../core/application/use-case/upload-product-image'
+import { getReport } from '../core/application/use-case/reports'
 
 const products = new PrismaProductRepository(prisma)
 const orders = new PrismaOrderRepository(prisma)

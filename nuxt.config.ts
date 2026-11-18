@@ -1,4 +1,5 @@
 import tailwindcss from '@tailwindcss/vite'
+import { fileURLToPath } from 'node:url'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -11,7 +12,4 @@ export default defineNuxtConfig({
     prefix: '',
     componentDir: './app/components/ui',
   },
-  alias: {
-    '@server': fileURLToPath(new URL('./server', import.meta.url))
-  }
 })
