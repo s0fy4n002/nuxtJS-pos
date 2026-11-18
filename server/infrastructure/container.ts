@@ -1,8 +1,9 @@
-import { createOrder, listOrders } from '../core/application/use-cases/orders'
+import { createOrder, listOrders } from '../core/application/use-case/orders'
 import {
   createProduct, getProduct, listProducts, updateProduct,
-} from '../core/application/use-cases/products'
-import { getReport } from '../core/application/use-cases/reports'
+} from '../core/application/use-case/products'
+import { getReport } from '../core/application/use-case/reports'
+
 import { prisma } from './prisma/client'
 import { PrismaOrderRepository } from './prisma/order.repository'
 import { PrismaProductRepository } from './prisma/product.repository'
