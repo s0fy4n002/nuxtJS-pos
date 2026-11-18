@@ -3,7 +3,7 @@ import { toast } from 'vue-sonner'
 
 definePageMeta({ layout: 'admin' })
 
-const { data: products, refresh } = await useFetch('/api/admin/../products', { default: () => [] })
+const { data: products, refresh } = await useFetch('/api/products', { default: () => [] })
 
 interface Form {
   id?: number
