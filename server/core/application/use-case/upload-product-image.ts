@@ -1,4 +1,4 @@
-import { detectImageType } from '../../domain/file'
+import { detectImageType } from '@server/core/domain/file'
 import { invalid, notFound } from '../../domain/errors'
 import type { FileStorage, ProductRepository } from '../ports'
 
