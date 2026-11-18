@@ -1,4 +1,5 @@
-import { useCases } from '@server/infrastructure/container'
+import { useCases } from "../../../../infrastructure/container"
+
 
 export default defineEventHandler(async (event) => {
   const id = idParam(event)

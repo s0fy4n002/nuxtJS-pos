@@ -1,5 +1,6 @@
-import { detectImageType } from '@server/core/domain/file'
+
 import { invalid, notFound } from '../../domain/errors'
+import { detectImageType } from '../../domain/file'
 import type { FileStorage, ProductRepository } from '../ports'
 
 const MAX_SIZE = 2 * 1024 * 1024 // 2MB (aman untuk limit body Vercel 4.5MB)
