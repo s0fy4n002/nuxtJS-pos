@@ -2,6 +2,7 @@
 definePageMeta({ layout: 'admin' })
 
 const { data: orders } = await useFetch('/api/admin/orders', { default: () => [] })
+console.log("Orders: ", orders.value);
 const fmt = (s: string) => new Date(s).toLocaleString('id-ID')
 </script>
 
@@ -23,7 +24,7 @@ const fmt = (s: string) => new Date(s).toLocaleString('id-ID')
         <TableRow v-for="o in orders" :key="o.id">
           <TableCell>{{ o.code }}</TableCell>
           <TableCell>{{ fmt(o.createdAt) }}</TableCell>
-          <TableCell class="text-right">{{ o._count.items }}</TableCell>
+          <TableCell class="text-right">{{ o.itemCount }}</TableCell>
           <TableCell class="text-right">{{ rupiah(o.total) }}</TableCell>
           <TableCell class="text-right">{{ rupiah(o.paid) }}</TableCell>
           <TableCell class="text-right">{{ rupiah(o.change) }}</TableCell>
